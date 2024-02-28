@@ -32,15 +32,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Authorized));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.txbLogin = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txbPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.swPassword = new Guna.UI2.WinForms.Guna2ToggleSwitch();
-            this.LinklblRegistration = new System.Windows.Forms.Label();
+            this.btnAuthorized = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.LinklblRegistration = new System.Windows.Forms.Label();
+            this.swPassword = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.txbPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txbLogin = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -67,16 +67,6 @@
             this.guna2Panel2.Size = new System.Drawing.Size(464, 42);
             this.guna2Panel2.TabIndex = 1;
             // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(419, 0);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 42);
-            this.guna2ControlBox1.TabIndex = 0;
-            // 
             // guna2ControlBox2
             // 
             this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
@@ -88,10 +78,20 @@
             this.guna2ControlBox2.Size = new System.Drawing.Size(45, 42);
             this.guna2ControlBox2.TabIndex = 0;
             // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(419, 0);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 42);
+            this.guna2ControlBox1.TabIndex = 0;
+            // 
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel1.Controls.Add(this.guna2Button1);
+            this.guna2ShadowPanel1.Controls.Add(this.btnAuthorized);
             this.guna2ShadowPanel1.Controls.Add(this.label1);
             this.guna2ShadowPanel1.Controls.Add(this.LinklblRegistration);
             this.guna2ShadowPanel1.Controls.Add(this.swPassword);
@@ -105,35 +105,77 @@
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(376, 340);
             this.guna2ShadowPanel1.TabIndex = 0;
             // 
-            // txbLogin
+            // btnAuthorized
             // 
-            this.txbLogin.Animated = true;
-            this.txbLogin.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.txbLogin.BorderRadius = 10;
-            this.txbLogin.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.txbLogin.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbLogin.DefaultText = "";
-            this.txbLogin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txbLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txbLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbLogin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(75)))));
-            this.txbLogin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbLogin.Font = new System.Drawing.Font("JetBrains Mono", 12F);
-            this.txbLogin.ForeColor = System.Drawing.Color.Transparent;
-            this.txbLogin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbLogin.IconLeft = ((System.Drawing.Image)(resources.GetObject("txbLogin.IconLeft")));
-            this.txbLogin.IconLeftSize = new System.Drawing.Size(35, 35);
-            this.txbLogin.Location = new System.Drawing.Point(51, 62);
-            this.txbLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txbLogin.Name = "txbLogin";
-            this.txbLogin.PasswordChar = '\0';
-            this.txbLogin.PlaceholderText = "Логин";
-            this.txbLogin.SelectedText = "";
-            this.txbLogin.Size = new System.Drawing.Size(286, 50);
-            this.txbLogin.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.txbLogin.TabIndex = 0;
-            this.txbLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnAuthorized.Animated = true;
+            this.btnAuthorized.BackColor = System.Drawing.Color.Transparent;
+            this.btnAuthorized.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnAuthorized.BorderRadius = 10;
+            this.btnAuthorized.BorderThickness = 1;
+            this.btnAuthorized.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAuthorized.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAuthorized.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAuthorized.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAuthorized.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(75)))));
+            this.btnAuthorized.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnAuthorized.ForeColor = System.Drawing.Color.White;
+            this.btnAuthorized.Location = new System.Drawing.Point(109, 249);
+            this.btnAuthorized.Name = "btnAuthorized";
+            this.btnAuthorized.ShadowDecoration.BorderRadius = 50;
+            this.btnAuthorized.ShadowDecoration.Color = System.Drawing.Color.DimGray;
+            this.btnAuthorized.ShadowDecoration.Depth = 0;
+            this.btnAuthorized.ShadowDecoration.Enabled = true;
+            this.btnAuthorized.Size = new System.Drawing.Size(180, 45);
+            this.btnAuthorized.TabIndex = 4;
+            this.btnAuthorized.Text = "Вход";
+            this.btnAuthorized.Click += new System.EventHandler(this.btnAuthorized_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.Font = new System.Drawing.Font("JetBrains Mono", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label1.Location = new System.Drawing.Point(136, 215);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(126, 19);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Скрыть пароль";
+            // 
+            // LinklblRegistration
+            // 
+            this.LinklblRegistration.AutoSize = true;
+            this.LinklblRegistration.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LinklblRegistration.Font = new System.Drawing.Font("JetBrains Mono", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LinklblRegistration.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.LinklblRegistration.Location = new System.Drawing.Point(105, 304);
+            this.LinklblRegistration.Name = "LinklblRegistration";
+            this.LinklblRegistration.Size = new System.Drawing.Size(180, 19);
+            this.LinklblRegistration.TabIndex = 3;
+            this.LinklblRegistration.Text = "У вас нет аккаунта?";
+            this.LinklblRegistration.Click += new System.EventHandler(this.LinklblRegistration_Click);
+            // 
+            // swPassword
+            // 
+            this.swPassword.Animated = true;
+            this.swPassword.AutoRoundedCorners = true;
+            this.swPassword.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.swPassword.CheckedState.BorderRadius = 12;
+            this.swPassword.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.swPassword.CheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.swPassword.CheckedState.InnerBorderRadius = 8;
+            this.swPassword.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.swPassword.Location = new System.Drawing.Point(51, 211);
+            this.swPassword.Name = "swPassword";
+            this.swPassword.Size = new System.Drawing.Size(49, 27);
+            this.swPassword.TabIndex = 1;
+            this.swPassword.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.swPassword.UncheckedState.BorderRadius = 12;
+            this.swPassword.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.swPassword.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.swPassword.UncheckedState.InnerBorderRadius = 8;
+            this.swPassword.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.swPassword.CheckedChanged += new System.EventHandler(this.swPassword_CheckedChanged);
             // 
             // txbPassword
             // 
@@ -165,75 +207,35 @@
             this.txbPassword.TabIndex = 0;
             this.txbPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // swPassword
+            // txbLogin
             // 
-            this.swPassword.Animated = true;
-            this.swPassword.AutoRoundedCorners = true;
-            this.swPassword.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.swPassword.CheckedState.BorderRadius = 12;
-            this.swPassword.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.swPassword.CheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.swPassword.CheckedState.InnerBorderRadius = 8;
-            this.swPassword.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.swPassword.Location = new System.Drawing.Point(51, 211);
-            this.swPassword.Name = "swPassword";
-            this.swPassword.Size = new System.Drawing.Size(49, 27);
-            this.swPassword.TabIndex = 1;
-            this.swPassword.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.swPassword.UncheckedState.BorderRadius = 12;
-            this.swPassword.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.swPassword.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.swPassword.UncheckedState.InnerBorderRadius = 8;
-            this.swPassword.UncheckedState.InnerColor = System.Drawing.Color.White;
-            this.swPassword.CheckedChanged += new System.EventHandler(this.swPassword_CheckedChanged);
-            // 
-            // LinklblRegistration
-            // 
-            this.LinklblRegistration.AutoSize = true;
-            this.LinklblRegistration.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LinklblRegistration.Font = new System.Drawing.Font("JetBrains Mono", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LinklblRegistration.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.LinklblRegistration.Location = new System.Drawing.Point(105, 304);
-            this.LinklblRegistration.Name = "LinklblRegistration";
-            this.LinklblRegistration.Size = new System.Drawing.Size(180, 19);
-            this.LinklblRegistration.TabIndex = 3;
-            this.LinklblRegistration.Text = "У вас нет аккаунта?";
-            this.LinklblRegistration.Click += new System.EventHandler(this.LinklblRegistration_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Font = new System.Drawing.Font("JetBrains Mono", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Location = new System.Drawing.Point(136, 215);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 19);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Скрыть пароль";
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(75)))));
-            this.guna2Button1.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(109, 249);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.BorderRadius = 50;
-            this.guna2Button1.ShadowDecoration.Color = System.Drawing.Color.DimGray;
-            this.guna2Button1.ShadowDecoration.Depth = 0;
-            this.guna2Button1.ShadowDecoration.Enabled = true;
-            this.guna2Button1.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button1.TabIndex = 4;
-            this.guna2Button1.Text = "Вход";
+            this.txbLogin.Animated = true;
+            this.txbLogin.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.txbLogin.BorderRadius = 10;
+            this.txbLogin.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.txbLogin.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txbLogin.DefaultText = "";
+            this.txbLogin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txbLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txbLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbLogin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(75)))));
+            this.txbLogin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbLogin.Font = new System.Drawing.Font("JetBrains Mono", 12F);
+            this.txbLogin.ForeColor = System.Drawing.Color.Transparent;
+            this.txbLogin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbLogin.IconLeft = ((System.Drawing.Image)(resources.GetObject("txbLogin.IconLeft")));
+            this.txbLogin.IconLeftSize = new System.Drawing.Size(35, 35);
+            this.txbLogin.Location = new System.Drawing.Point(51, 62);
+            this.txbLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbLogin.Name = "txbLogin";
+            this.txbLogin.PasswordChar = '\0';
+            this.txbLogin.PlaceholderText = "Логин";
+            this.txbLogin.SelectedText = "";
+            this.txbLogin.Size = new System.Drawing.Size(286, 50);
+            this.txbLogin.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txbLogin.TabIndex = 0;
+            this.txbLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Authorized
             // 
@@ -261,7 +263,7 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnAuthorized;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label LinklblRegistration;
         private Guna.UI2.WinForms.Guna2ToggleSwitch swPassword;

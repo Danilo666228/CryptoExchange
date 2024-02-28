@@ -21,7 +21,7 @@ namespace CryptoExchange.ConnectDbContext
         [DefaultValue(0)]
         public decimal Balance { get; set; }
 
-        public void AddUser(string lastname, string firstname, string middlename, string login, string password)
+        public bool AddUser(string lastname, string firstname, string middlename, string login, string password)
         {
             using (ConnectDb db = new ConnectDb())
             {
@@ -38,10 +38,27 @@ namespace CryptoExchange.ConnectDbContext
                     });
                     db.SaveChanges();
                     MessageBox.Show("Вы успешно зарегистированы");
+                    return true;
                 }
                 else
                 {
                     MessageBox.Show("Этот логин уже занят");
+                    return false;
+                }
+            }
+        }
+        public int ReturnId(string login,string password)
+        {
+            using(ConnectDb db = new ConnectDb())
+            {
+                var userId = db.Users.FirstOrDefault(item => item.Login == login && item.Password == password);
+                if(userId == null)
+                {
+                    return -1;
+                }
+                else
+                {
+                    return userId.Id;
                 }
             }
         }

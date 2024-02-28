@@ -1,4 +1,5 @@
 ﻿using CryptoExchange.ConnectDbContext;
+using CryptoExchange.ValidateUser;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,8 @@ namespace CryptoExchange
 {
     public partial class RegistrationForm : Form
     {
-        User user = new User();
+
+
         public RegistrationForm()
         {
             InitializeComponent();
@@ -22,7 +24,27 @@ namespace CryptoExchange
 
         private void btnRegistration_Click(object sender, EventArgs e)
         {
-            user.AddUser(txbLastName.Text,txbFirstName.Text,txbMiddleName.Text,txbLogin.Text,user.GetHashPassword(txbPassword.Text));
+            Validate validate = new Validate();
+            User user = new User();
+            if (validate.ValidateUser(txbLastName.Text, txbFirstName.Text, txbMiddleName.Text, txbLogin.Text, txbPassword.Text,txbRepeatPassword.Text) == false)
+            {
+                return;
+            }
+            else if (user.AddUser(txbLastName.Text, txbFirstName.Text, txbMiddleName.Text, txbLogin.Text,
+                txbPassword.Text))
+            {
+                this.Hide();
+                Authorized authorized = new Authorized();
+                authorized.Show();
+
+            }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Authorized authorized = new Authorized();
+            authorized.Show();
         }
     }
 }
